@@ -193,6 +193,21 @@ Ab apna web browser kholiye aur is link par jayen:
 - **OCR Integration**: Reads text from scanned images and PDFs using Tesseract.
 - **Smart Memory**: Keeps track of your past conversations for contextual replies.
 - **GPU Accelerated**: Fully utilizes your Graphics Card via Ollama for lightning-fast AI responses.
+# 1. Install uv globally (if you haven't already)
+pip install uv
+
+# 2. Navigate to your project root
+cd "d:\AI Project\AI V\mask-ai"
+
+# 3. Create a lightning-fast virtual environment using uv
+uv venv
+
+# 4. Activate the new virtual environment
+.venv\Scripts\activate
+
+# 5. Install all dependencies from the pyproject.toml we just created
+# `uv sync` will install everything and generate a lockfile (uv.lock) for exact versioning
+uv sync
 
 ---
 *Developed by Abdul Rahman Nadap*
