@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Chat Area -->
+<div class="chat-container" id="chat-history"></div>
+
+<!-- Floating Input Area at Bottom -->
+<div class="input-container">
+    <div id="attachment-preview" class="attachment-preview" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+        <span id="attachment-name"></span>
+        <button onclick="removeAttachment()" class="remove-attachment-btn" title="Remove attachment">&times;</button>
+    </div>
+    <div class="input-box">
+        <label for="pdf-upload" class="upload-btn" title="Upload Document (PDF, DOCX, TXT, XLSX)">
+            <svg viewBox="0 0 24 24"><path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5a2.5 2.5 0 0 1 5 0v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5a2.5 2.5 0 0 0 5 0V5c0-3.31-2.69-6-6-6S3 1.69 3 5v11.5c0 3.31 2.69 6 6 6s6-2.69 6-6V6h-1.5z"/></svg>
+        </label>
+        <input type="file" id="pdf-upload" accept=".pdf,.docx,.txt,.xlsx" style="display: none;" onchange="handleFileUpload(event)">
+        <textarea id="query" placeholder="Ask Mask AI anything..." rows="1" onkeydown="handleKeyPress(event)" oninput="autoResize(this)"></textarea>
+        <button id="send-btn" onclick="sendChat()" aria-label="Send Message">
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+    </div>
+</div>
+{% endblock %}

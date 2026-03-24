@@ -1,0 +1,30 @@
+[project]
+name = "mask-ai"
+version = "0.1.0"
+description = "Mask AI - Business Analyst and RAG Assistant"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "jinja2",
+    "sqlalchemy",
+    "requests",
+    "python-multipart",
+    "pymupdf",
+    "python-docx",
+    "chromadb",
+    "pytesseract",
+    "pillow",
+    "duckduckgo-search",
+    "googlesearch-python",
+    "beautifulsoup4",
+    "yfinance",
+    "wikipedia",
+    "pandas",
+    "openpyxl",
+    "pyodbc"
+]
+
+[dependency-groups]
+dev = []
