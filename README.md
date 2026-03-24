@@ -14,6 +14,7 @@ Before running this project on your local system, ensure you have the following 
    * **Windows Users:** Download and install it in `C:\Program Files\Tesseract-OCR\`. Download Tesseract
 4. **SQL Server Express**: To save chat history. (Make sure *ODBC Driver 17 for SQL Server* is installed).
 5. **Git**: To clone the repository.
+6. **uv**: For lightning-fast Python package management. (`pip install uv`)
 
 ---
 
